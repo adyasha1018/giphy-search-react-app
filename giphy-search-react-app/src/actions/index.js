@@ -9,7 +9,7 @@ const API_KEY = "&api_key=FXwiij56YpJULXpGtoUHGpC9dWpMoCiB";
 
 export function getGiphys(searchText = null) {
   const result = request.get(
-    `${BASE_API_URL}${searchText.replace(/\s/g, "+")}${API_KEY}`
+    `${BASE_API_URL}${searchText.replace(/\s/g, "+")}&limit=10${API_KEY}`
   );
   return {
     type: REQUEST_GIPHYS,
